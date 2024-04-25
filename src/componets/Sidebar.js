@@ -7,22 +7,22 @@ const Sidebar = ()=>{
     // Early Return pattern
     if (!isMenuOpen) return null;
     return(
-        <div className="p-10 w-92 shadow-lg">
-            <ul>
+        <div className="p-12 m-2 w-92 shadow-lg">
+            <ul className="font-medium">
                 <li> <Link to="/">Home</Link></li>
                 <li>Shorts</li>
                 <li>Videos</li>
                 <li>Live</li>
             </ul>
             <h1 className="font-bold">Subscription</h1>
-            <ul>
+            <ul className="font-medium">
                 <li>Music</li>
                 <li>Sports</li>
                 <li>Gaming</li>
                 <li>Movies</li>
             </ul>
             <h1 className="font-bold">Watch Later</h1>
-            <ul>
+            <ul className="font-medium">
                 <li>Music</li>
                 <li>Sports</li>
                 <li>Gaming</li>

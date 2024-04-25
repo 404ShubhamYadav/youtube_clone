@@ -16,7 +16,7 @@ const VideoContainer = ()=>{
         setVideos(json.items);
     }
     return(
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap  ">
             {videos[0] && <AddVideoCart info = {videos[0]}/>}
             {videos.map((video)=>(
                 <Link key ={video.id} to={"/watch?v="+ video.id}><VideoCart info = {video}/></Link>
