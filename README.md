@@ -1,7 +1,7 @@
-#You Tube clone
+# YouTube clone
 
-<!-- 
-#Roadmap
+# Roadmap
+
  -Header 
  -Body 
     -Sidebar
@@ -11,4 +11,3 @@
         -VideoContainer
             -VideoCard
 
- -->
