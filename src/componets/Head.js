@@ -23,6 +23,18 @@ const Head = () => {
      * }
      * searchQuery = Iphone
      * */
+    const getSearchSuggestions = async () => {
+        console.log("API Call - " + searchQuery);
+        const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+        const json = await data.json();
+        // console.log(json[1]);
+        setSuggestions(json[1])
+
+        // update cathe
+        dispatch(cacheResults({
+            [searchQuery]: json[1],
+        }));
+    };
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -38,20 +50,6 @@ const Head = () => {
         };
 
     }, [searchQuery]);
-
-
-    const getSearchSuggestions = async () => {
-        console.log("API Call - " + searchQuery);
-        const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
-        const json = await data.json();
-        // console.log(json[1]);
-        setSuggestions(json[1])
-
-        // update cathe
-        dispatch(cacheResults({
-            [searchQuery]: json[1],
-        }));
-    };
 
     const toggleMenuHandler = () => {
         dispatch(toggleMenu())
