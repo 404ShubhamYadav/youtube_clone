@@ -3,7 +3,7 @@ import Buttons from "./Buttons";
 
 const ButtonList = ()=>{
     return(
-        <div className="flex">
+        <div className="flex overflow-x-auto">
             <Buttons name= "All"/>
             <Buttons name= "Games"/>
             <Buttons name= "Music"/>

@@ -55,22 +55,22 @@ const Head = () => {
         dispatch(toggleMenu())
     }
     return (
-        <div className="grid grid-flow-col p-2 shadow-lg">
-            <div className="flex col-span-2 ">
+        <div className="grid grid-flow-col p-2 shadow-lg ">
+            <div className=" flex col-span-1 md:col-span-2 ">
                 <img
                     onClick={() => toggleMenuHandler()}
-                    className=" h-12 w-10 cursor-pointer "
-                    src="https://cdn3.iconfinder.com/data/icons/iconae-light/100/grid-hamburgermenu-menu-menubutton-toggle-togglemenu-ui-512.png" alt="menu" />
-                    
+                    className=" h-12 w-9 cursor-pointer "
+                    src="https://cdn.iconscout.com/icon/free/png-512/free-hamburger-menu-462145.png?f=webp&w=512"/>         
                 <img
-                    className="h-12 w-15 mx-2"
+                    className="hidden md:block h-12 w-15 mx-2"
                     src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt="logo" />
             </div>
-            <div className="col-span-10 px-9">
+            <div className="px-6 md:px-9 col-span-10">
                 <div>
                     <input
                         className="w-2/3 border border-gray-400 p-2 rounded-l-full"
                         type="text"
+                        placeholder="Search"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onFocus={() => setShowSuggestions(true)}
@@ -89,7 +89,7 @@ const Head = () => {
                 )}
             </div>
             <div>
-                <img className="h-8 col-span-1" src="https://cdn-icons-png.freepik.com/256/1077/1077114.png" alt="user Logo" />
+                <img className="col-span-1 h-8" src="https://cdn-icons-png.freepik.com/256/1077/1077114.png" alt="user Logo" />
             </div>
         </div>
     )
